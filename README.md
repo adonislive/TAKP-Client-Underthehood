@@ -5,7 +5,7 @@ Start by Downloading and/or cloning this repo. Now you are ready to begin.
 
 1. Download Ghidra
 
-2. Move ghidra_function_name_import.py into your Ghidra_scripts folder
+2. Move ghidra_memory_address_function_name_import.py into your Ghidra_scripts folder
 
 3. Open one of the following in Ghidra:
 <br>   a. eqgame.exe
