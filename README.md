@@ -20,4 +20,4 @@ Start by Downloading and/or cloning this repo. Now you are ready to begin.
 
 6. Run Auto Analysis in Ghidra
 
-7. Your Ghidra decompile will now show TAKP Client source code in Psuedo C format for the selected file
+7. Your Ghidra decompile will now show TAKP Client decompiled code in Psuedo C format for the selected file
