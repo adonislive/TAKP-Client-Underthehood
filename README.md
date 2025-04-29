@@ -8,11 +8,11 @@ Start by Downloading and/or cloning this repo. Now you are ready to begin.
 2. Move ghidra_function_name_import.py into your Ghidra_scripts folder
 
 3. Open one of the following in Ghidra:
-   -eqgame.exe
-   -eqgfx_dx8.dll
-   -eqmain.dll
-   -eqw.dll
-   -eqwfix.exe
+   a. eqgame.exe
+   b. eqgfx_dx8.dll
+   c. eqmain.dll
+   d. eqw.dll
+   e. eqwgfix.exe
 
 4. Prior to any Auto Analysis, use the Script Manager to run the script ghidra_function_name_import.py
 
