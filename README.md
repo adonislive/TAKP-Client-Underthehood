@@ -1,5 +1,5 @@
 # TAKP-Client-Underthehood
-Instructions to see TAKP Client source code:
+Instructions to see TAKP Client Psuedo C code (resenmbles source code, but is decompiled version):
 
 Start by Downloading and/or cloning this repo. Now you are ready to begin.
 
