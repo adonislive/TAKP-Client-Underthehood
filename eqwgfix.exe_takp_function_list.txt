@@ -1,0 +1,13 @@
+0x00401000 processGammaRampForTargetProcess
+0x004010e0 entry
+0x00401180 parseIntFromString
+0x0040120b parseProcessIdWrapper
+0x00401216 isCharacterInCategory
+0x004012c4 GetStringTypeWrapper
+0x00401410 _memset
+0x00401468 __global_unwind2
+0x004014aa __local_unwind2
+0x0040153e saveExceptionContext
+0x0040161d unwindLocalExceptionStack
+0x00401640 allocateStackSpace
+0x00401670 RtlUnwind
