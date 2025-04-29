@@ -14,7 +14,7 @@ Start by Downloading and/or cloning this repo. Now you are ready to begin.
 <br>   d. eqw.dll
 <br>   e. eqwgfix.exe
 
-4. Prior to any Auto Analysis, use the Script Manager to run the script ghidra_function_name_import.py
+4. Prior to any Auto Analysis, use the Script Manager to run the script ghidra_memory_address_function_name_import.py 
 
 5. Select the associated function list to import of the file you selected in #3
 
