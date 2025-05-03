@@ -10,7 +10,7 @@ Start by Downloading and/or cloning this repo. Now you are ready to begin.
 3. Open one of the following in Ghidra:
 <br>   a. eqgame.exe
 <br>   b. eqgfx_dx8.dll
-<br>   c. eqmain.dll - still working on this one
+<br>   c. eqmain.dll
 <br>   d. eqw.dll
 <br>   e. eqwgfix.exe
 
