@@ -525,6 +525,7 @@
 0x0041eb28 SendCommand4
 0x0041eb3e CGiveWnd_CGiveWnd
 0x0041ec8e CGiveWnd_Activate
+0x0041ecb1 HideTradeWindow
 0x0041ecd9 CGiveWnd_DrawWindowTooltips
 0x0041edde CGiveWnd_UpdateGiveWindowDisplay
 0x0041ee89 CXStr_initializeStrings
@@ -900,7 +901,7 @@
 0x0043472e CSpellBookWnd_WndNotification
 0x004347a1 CSpellBookWnd_HandleRightClickOnSpell
 0x004348f8 CSpellBookWnd_StartSpellMemorizationDrag
-0x00434a05 BeginMemorize
+0x00434a05 CSpellBookWnd_BeginMemorize
 0x00434b38 CSpellBookWnd_FinishMemorizing
 0x00434c05 CSpellBookWnd_GetSpellMemTicksLeft
 0x00434da1 CSpellBookWnd_StartSpellScribe
@@ -1187,6 +1188,9 @@
 0x00453e94 EQ_Main_drawAltAdvance
 0x00454aa1 EQ_Main_draw
 0x0045989d EQ_Main_draw
+0x0045c176 EQ_Main_DrawMainPages
+0x00461e5c EQ_Main_DrawUIElementsAndHotkeys
+0x00463056 EQ_Main_draw_renderCharacterU
 0x0046440a EQ_Main_draw_renderCharacterUI
 0x004673c4 EQ_Main_RenderSpellbookInterface
 0x00467f36 EQ_Main_RenderGameInterface
@@ -1833,7 +1837,7 @@
 0x004c7448 EQ_Character_ProcessAffects
 0x004c7910 EQ_Character_WhoPutThisEffectOnMe
 0x004c7a3e EQ_Character_FindAffectSlot
-0x004c82dc CanSpellStackMultipleTimes
+0x004c82dc EQ_Character_ICanSpellStackMultipleTimes
 0x004c830b EQ_Character_IsStackBlocked
 0x004c8492 EQ_Character_HitBySpell
 0x004ca746 EQ_Character_CalculateSpellDuration
@@ -2025,6 +2029,7 @@
 0x004dc9be CheckForGroupChanges
 0x004dcdd1 CEverQuest_HandleWorldMessage_FloorRelated?
 0x004dce71 msg_pq_update
+0x004dd10b decreaseSkillPoints
 0x004dd19d msg_launchspell_info
 0x004dd564 msg_move_item
 0x004dd7a3 CEverQuest_HandleWorldMessage_do_quit
@@ -2045,7 +2050,7 @@
 0x004e019a msg_steal
 0x004e0625 msg_move_item?
 0x004e06ef CEverQuest_HandleWorldMessage_LevelUpdate
-0x004e07b9 MsgNpcSayText
+0x004e07b9 msg_npc_say_text
 0x004e0907 msg_successful_hit
 0x004e0a6d CEverQuest_msgStartIcon
 0x004e0d29 CEverQuest_msgStartInotes
@@ -2090,7 +2095,7 @@
 0x004e45ab CEverQuest_HandleWorldMessage_save_guilds2
 0x004e45eb EQPlayer_get_player
 0x004e4651 CDisplay_UpdateNameSprite
-0x004e46d5 displayPlayerMessage
+0x004e46d5 surnamePassedOrRejected
 0x004e473f CEverQuest_HandleWorldMessage_GuildDisband
 0x004e47a2 CEverQuest_HandleWorldMessage_FatigueRelated?
 0x004e483f msg_guild_list
@@ -2205,7 +2210,7 @@
 0x004f3228 DoMissileHit
 0x004f35c7 EqGetTime
 0x004f35e0 EqGetTime
-0x004f35e5 for_command_line_parsing
+0x004f35e5 initializeRandomNumberGenerator
 0x004f3662 RandNbr
 0x004f36a8 number_percent
 0x004f36b7 number_from_set
@@ -2391,6 +2396,7 @@
 0x004fa035 /combatmusic
 0x004fa100 /mixahead
 0x004fa1cc /mp3
+0x004fa556 /gems
 0x004fa597 /toggletell
 0x004fa64b /inquire
 0x004fa686 /praise
@@ -2573,6 +2579,11 @@
 0x0050c216 EQPlayer_SetInvited
 0x0050c23e EQPlayer_PlaySoundA
 0x0050c2c9 EQPlayer_SetSounds
+0x0050dd61 initializeFrogSoundsAndSocialState
+0x00510cb0 LoadEntitySoundEffects
+0x00517d2e initializeActorSocialState
+0x00517eaa initializeActorSocialState
+0x0051d51c initializeActorSocialState
 0x0051f652 SendCommand^
 0x0051f668 EQPlayer_SetCurrentLoopSound
 0x0051f6cb EQPlayer_IsEntityFlying
@@ -2605,7 +2616,7 @@
 0x00520aaf EQPMInfo_EQPMInfo
 0x00520efb EQPMInfo_~EQPMInfo
 0x00520f43 EQSoundEmitter_~EQSoundEmitter
-0x00520f91 DoorLoadingCode
+0x00520f91 EQSwitch_EQSwitch_DoorLoadingCode
 0x00521434 EQSwitch_~EQSwitch
 0x005214b6 EQSwitch_FindSwitchByZCoordinate
 0x005214d5 EQSwitch_UseSwitch?
@@ -2638,7 +2649,7 @@
 0x00523f42 EQWorldData_GetMinLevel
 0x00523f73 EQWorldData_GetZoneNameFromIndex
 0x00523fa4 EQWorldData_GetIndexFromZoneName
-0x00523fed EQZoneInfo_Constructor
+0x00523fed EQZoneInfo_EQZoneInfo
 0x0052408f EQZoneInfo_~EQZoneInfo
 0x005240ab EQZoneInfo_~EQZoneInfo
 0x005240bc InitializeRaidInfo
@@ -2881,7 +2892,7 @@
 0x0054d0d8 net_shutdown
 0x0054d109 wait_for_disconnect
 0x0054d1a8 DrawPacketLossBar
-0x0054d380 LODWORD?
+0x0054d380 LODWORD_countSetBits
 0x0054d3ae DrawNetStatus
 0x0054d664 vehicle_premove
 0x0054d7a9 vehicle_postmove
@@ -4135,6 +4146,7 @@
 0x00594910 CXStrWnd_Destructor
 0x00594930 InitializeCustomWindow
 0x00594a90 CXStrWnd_Destructor
+0x00594b00 RenderEntityNameplate
 0x00595130 getEntityFlag
 0x00595140 ProcessWindowFrame
 0x005953e0 HandleMouseClick
@@ -4350,7 +4362,7 @@
 0x005a13e0 CXStr_initializeStringReources
 0x005a1400 SendCommand\X10
 0x005a1420 CComboWnd_CComboWnd
-0x005a1620 getWidthFromObject
+0x005a1620 CComboWnd_getWidthFromObject
 0x005a1630 CComboWnd_~CComboWnd
 0x005a1650 CComboWnd_~CComboWnd
 0x005a16c0 CComboWnd_GetListRect
@@ -4379,7 +4391,7 @@
 0x005a23e0 CEditWnd_GetTextPositionCoordinates
 0x005a2570 CEditWnd_ProcessEditWindowText
 0x005a2660 CEditWnd_SelectableCharFromPoint
-0x005a2920 AddItemTag
+0x005a2920 CEditWnd_AddItemTag
 0x005a2a00 CEditWnd_ProcessEditWindowTags
 0x005a2c00 CEditWnd_RenderEditWindowText
 0x005a3010 CEditWnd_HandleKeyboardMsg
@@ -4388,7 +4400,7 @@
 0x005a3a00 CEditWnd_GetCaretPt
 0x005a3cc0 CEditWnd_GetCaretPosition
 0x005a3ce0 CEditWnd_GetCaretPosition
-0x005a3d00 SetText
+0x005a3d00 CEditWnd_SetText
 0x005a3df0 CEditWnd_GetAndIncrementRefCount
 0x005a3e30 CEditWnd_FilterInputStr
 0x005a3f00 CEditWnd_ReplaceSelection
@@ -4403,14 +4415,14 @@
 0x005a4820 CXStr_initializeEmptyString
 0x005a4840 SendCommandP
 0x005a4860 CTextureAnimation_~CTextureAnimation
-0x005a4870 TextureFont_getCachedFontWidth
+0x005a4870 CTextureFont_getCachedFontWidth
 0x005a4890 CTextureFont_GetCharacterWidth
 0x005a48b0 CTextureFont_GetTextExtent
 0x005a4930 CTextureFont_GetHeight
 0x005a4940 CTextureFont_GetFontName
 0x005a4970 CTextureFont_DrawWrappedText
-0x005a4a30 DrawFormattedText
-0x005a4b00 TextureFont_WrapTextToWidth
+0x005a4a30 CTextureFont_DrawFormattedText
+0x005a4b00 CTextureFont_WrapTextToWidth
 0x005a4de0 CXStr_initializeEmptyString
 0x005a4e00 SendCommand\X10
 0x005a4e20 ButtonDefinition_ButtonDefinition
@@ -4561,6 +4573,7 @@
 0x005aa0e0 CXMLDataManager_isPathInXMLHierarchy
 0x005aa1b0 CXMLDataManager_buildHashTableFromCollection
 0x005aa2c0 CXMLDataManager_initializeUIDataFromXML
+0x005aaa20 copyCollectionData
 0x005aac00 no_op_empty_return
 0x005aac10 Collection_resizeCollection
 0x005aadb0 Collection_resizeCollection
